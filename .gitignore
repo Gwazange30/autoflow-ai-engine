@@ -1,0 +1,21 @@
+# 1. Core Dependencies (Crucial to block node_modules)
+node_modules/
+.pnpm-store/
+
+# 2. Production Build Output (Generated when you build the app)
+dist/
+build/
+
+# 3. Environment Variables & Security Secrets
+.env
+.env.local
+
+# 4. Local Mock Database Runtime
+server/db.json
+
+# 5. Editor Logs & System Metadata
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+.vscode/
