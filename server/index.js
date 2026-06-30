@@ -21,7 +21,7 @@ app.use(express.json());
 
 // ── Qwen AI Client (OpenAI-compatible) ──────────────────────────────
 const qwenClient = new OpenAI({
-  apiKey: 'sk-ws-H.LRHHDH.89fi.MEQCIHnKmNup35xEc1nR9l1bnGiR36gu9c0vf9cjnBgQPDWQAiAED3nE9h2-b0l0CtGxEdBZNpz1a9G8SYQEG4lrpnY9pw',
+  apiKey: process.env.QWEN_API_KEY, // Read safety from hidden .env file.
   baseURL: 'https://dashscope-intl.aliyuncs.com/compatible-mode/v1'
 });
 const QWEN_MODEL = 'qwen-plus';
@@ -29,7 +29,7 @@ const QWEN_MODEL = 'qwen-plus';
 // \u2500\u2500 Supabase Client \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 // Use env vars if available, otherwise fallback to hardcoded defaults
 const supabaseUrl = process.env.VITE_SUPABASE_URL || 'https://nlkyifjwsrsxpedzdiay.supabase.co';
-const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5sa3lpZmp3c3JzeHBlZHpkaWF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1MDUxNjUsImV4cCI6MjA5ODA4MTE2NX0.xT3CyXGWKscMHpkmVc3E60d4R1OsbLepK1BbGyhM1to';
+const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 

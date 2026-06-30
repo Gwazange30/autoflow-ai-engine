@@ -27,8 +27,8 @@ export function Header() {
             <User className="h-4 w-4 text-primary" />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-medium leading-none">Admin User</span>
-            <span className="text-xs text-muted-foreground">Enterprise Plan</span>
+            <span className="text-sm font-medium leading-none">Aliyu M. Mande</span>
+            <span className="text-xs text-muted-foreground">Lead Engineer</span>
           </div>
         </div>
       </div>
